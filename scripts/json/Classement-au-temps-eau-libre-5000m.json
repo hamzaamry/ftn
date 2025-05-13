@@ -1,0 +1,224 @@
+{
+  "source_url": "http://ftnatation.tn/wp-content/uploads/2022/05/Classement-au-temps-eau-libre-5000m.pdf",
+  "filename": "Classement-au-temps-eau-libre-5000m.pdf",
+  "metadata": {
+    "location": "Piscine Olympique Rades",
+    "date": "22/05/2022",
+    "temperature_air": null,
+    "temperature_water": null
+  },
+  "events": [
+    {
+      "gender": "Dames",
+      "category": "Toutes Categories ",
+      "results": [
+        {
+          "rank": 1,
+          "name": "MAALAOUI Ons",
+          "bib": 12,
+          "nationality": "TUN",
+          "birth_year": 2001,
+          "club": "OLYMPICA",
+          "time": "1:03:54.48",
+          "points": 1
+        },
+        {
+          "rank": 2,
+          "name": "BEN MILED Ela",
+          "bib": 5,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "ASCNS",
+          "time": "1:09:42.52",
+          "points": 2
+        },
+        {
+          "rank": 3,
+          "name": "GHDEMSI Salma",
+          "bib": 10,
+          "nationality": "TUN",
+          "birth_year": 2007,
+          "club": "OLYMPICA",
+          "time": "1:12:52.42",
+          "points": 3
+        },
+        {
+          "rank": 4,
+          "name": "SOUISSI Zeineb",
+          "bib": 22,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "ASCNS",
+          "time": "1:13:31.70",
+          "points": 4
+        },
+        {
+          "rank": 5,
+          "name": "BEN ISMAIL Lina",
+          "bib": 3,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "EST",
+          "time": "1:13:32.02",
+          "points": 5
+        },
+        {
+          "rank": 6,
+          "name": "GHARIANI Maissa",
+          "bib": 9,
+          "nationality": "TUN",
+          "birth_year": 2004,
+          "club": "CNBA",
+          "time": "1:17:11.67",
+          "points": 6
+        }
+      ]
+    },
+    {
+      "gender": "Messieurs",
+      "category": "Toutes Categories ",
+      "results": [
+        {
+          "rank": 1,
+          "name": "RAHMOUNI Rami",
+          "bib": 19,
+          "nationality": ".85",
+          "birth_year": null,
+          "club": "EST",
+          "time": "57:16",
+          "points": 1
+        },
+        {
+          "rank": 2,
+          "name": "MESFAR Heni",
+          "bib": 15,
+          "nationality": ".75",
+          "birth_year": null,
+          "club": "ASCNS",
+          "time": "57:17",
+          "points": 2
+        },
+        {
+          "rank": 3,
+          "name": "BERRIMA Moayed",
+          "bib": 7,
+          "nationality": ".75",
+          "birth_year": null,
+          "club": "ASCNS",
+          "time": "58:47",
+          "points": 3
+        },
+        {
+          "rank": 4,
+          "name": "BEN ABBES Mohamed Yassine",
+          "bib": 1,
+          "nationality": "TUN",
+          "birth_year": 2005,
+          "club": "ASM",
+          "time": "1:01:16.03",
+          "points": 4
+        },
+        {
+          "rank": 5,
+          "name": "MAATALAH Mohamed Dhia",
+          "bib": 13,
+          "nationality": "TUN",
+          "birth_year": 2007,
+          "club": "CA",
+          "time": "1:01:56.42",
+          "points": 5
+        },
+        {
+          "rank": 6,
+          "name": "OMRAN Ahmed",
+          "bib": 18,
+          "nationality": "TUN",
+          "birth_year": 2006,
+          "club": "CNBA",
+          "time": "1:03:35.81",
+          "points": 6
+        },
+        {
+          "rank": 7,
+          "name": "MOUEMEN Mohamed Majd",
+          "bib": 17,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "CNBA",
+          "time": "1:04:09.27",
+          "points": 7
+        },
+        {
+          "rank": 8,
+          "name": "HAKIRI ANOUER",
+          "bib": 11,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "OLYMPICA",
+          "time": "1:04:17.54",
+          "points": 8
+        },
+        {
+          "rank": 9,
+          "name": "BEN GHALIA Ahmed Zayd",
+          "bib": 2,
+          "nationality": "TUN",
+          "birth_year": 2007,
+          "club": "CNBA",
+          "time": "1:06:55.04",
+          "points": 9
+        },
+        {
+          "rank": 10,
+          "name": "BEN ROMDHAN Anas",
+          "bib": 6,
+          "nationality": "TUN",
+          "birth_year": 2005,
+          "club": "ASM",
+          "time": "1:09:12.26",
+          "points": 10
+        },
+        {
+          "rank": 11,
+          "name": "MOSFAR Fedi",
+          "bib": 16,
+          "nationality": "TUN",
+          "birth_year": 2007,
+          "club": "ASCNS",
+          "time": "1:09:28.99",
+          "points": 11
+        },
+        {
+          "rank": 12,
+          "name": "MAJDOUB Abdlaaziz",
+          "bib": 14,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "ASCNS",
+          "time": "1:10:33.00",
+          "points": 12
+        },
+        {
+          "rank": 13,
+          "name": "BOUDABOUS Mohamed Bader",
+          "bib": 8,
+          "nationality": "TUN",
+          "birth_year": 2007,
+          "club": "CA",
+          "time": "1:11:59.00",
+          "points": 13
+        },
+        {
+          "rank": 14,
+          "name": "BEN KHALFALLAH Ali",
+          "bib": 4,
+          "nationality": "TUN",
+          "birth_year": 2008,
+          "club": "ASCNS",
+          "time": "1:19:12.42",
+          "points": 14
+        }
+      ]
+    }
+  ]
+}

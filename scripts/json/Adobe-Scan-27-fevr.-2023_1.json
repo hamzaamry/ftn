@@ -1,0 +1,144 @@
+{
+  "source_url": "http://ftnatation.tn/wp-content/uploads/2023/02/Adobe-Scan-27-fevr.-2023_1.jpg",
+  "filename": "Adobe-Scan-27-fevr.-2023_1.pdf",
+  "metadata": {
+    "location": "Rades",
+    "date": "27/02/2023",
+    "temperature_air": "10",
+    "temperature_water": null
+  },
+  "events": [
+    {
+      "gender": "Dames",
+      "category": "Toutes Categories ",
+      "results": [
+        {
+          "rank": 1,
+          "name": "BEN MILED Ela (9) TUN 2008 ASCNS 1.",
+          "bib": null,
+          "nationality": ".53",
+          "birth_year": 20,
+          "club": null,
+          "time": "07:45",
+          "points": null
+        },
+        {
+          "rank": 2,
+          "name": "SOUISSI Zeineb (23) TUN 2008 LP",
+          "bib": null,
+          "nationality": "08",
+          "birth_year": 15,
+          "club": null,
+          "time": "1:09:56",
+          "points": null
+        }
+      ]
+    },
+    {
+      "gender": "Messieurs",
+      "category": "Toutes Categories ",
+      "results": [
+        {
+          "rank": 1,
+          "name": "BEN AJMIA Mohamed Khalil (6) TUN 2003 EST",
+          "bib": null,
+          "nationality": "60",
+          "birth_year": 20,
+          "club": null,
+          "time": "56:06",
+          "points": null
+        },
+        {
+          "rank": 2,
+          "name": "DOUMA Youssef (10) TUN 2009 OLYMPICA",
+          "bib": null,
+          "nationality": "27",
+          "birth_year": 38,
+          "club": null,
+          "time": "1:01",
+          "points": null
+        },
+        {
+          "rank": 3,
+          "name": "MAATALAH Mohamed Dhia (18) TUN 2007 CA",
+          "bib": null,
+          "nationality": "92",
+          "birth_year": 12,
+          "club": null,
+          "time": "1:01:31",
+          "points": null
+        },
+        {
+          "rank": 4,
+          "name": "MOUEMEN Mohamed Majd (4) TUN 2008 CNBA",
+          "bib": null,
+          "nationality": "35.00",
+          "birth_year": 11,
+          "club": null,
+          "time": "1:01",
+          "points": null
+        },
+        {
+          "rank": 5,
+          "name": "BEN GHORBEL Louay (22) TUN 2004 OLYMPICA",
+          "bib": null,
+          "nationality": "10",
+          "birth_year": null,
+          "club": null,
+          "time": "1:01:46.19",
+          "points": null
+        },
+        {
+          "rank": 6,
+          "name": "ARFAOU! Omar (15) TUN 2006 ASCNS",
+          "bib": null,
+          "nationality": "9",
+          "birth_year": null,
+          "club": null,
+          "time": "1:01:58.39",
+          "points": null
+        },
+        {
+          "rank": 7,
+          "name": "BOUSLIMI Mohamed Yaakoub (2) TUN 2009 OLYMPICA",
+          "bib": null,
+          "nationality": ":'59.13",
+          "birth_year": 3,
+          "club": null,
+          "time": "1:01",
+          "points": null
+        },
+        {
+          "rank": 8,
+          "name": "OMRAN Ahmed (20) TUN 2006 CNBA",
+          "bib": null,
+          "nationality": "7",
+          "birth_year": null,
+          "club": null,
+          "time": "1:02:33.22",
+          "points": null
+        },
+        {
+          "rank": 9,
+          "name": "MESFAR Fedy (12) TUN 2007 ASCNS",
+          "bib": null,
+          "nationality": "8",
+          "birth_year": null,
+          "club": null,
+          "time": "1:03:52.25",
+          "points": null
+        },
+        {
+          "rank": 10,
+          "name": "JAOUED! Mohamed Dhia Eddine (7) TUN 2007 EST",
+          "bib": null,
+          "nationality": "5",
+          "birth_year": null,
+          "club": null,
+          "time": "1:09:56.60",
+          "points": null
+        }
+      ]
+    }
+  ]
+}
