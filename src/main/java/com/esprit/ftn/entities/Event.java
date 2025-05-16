@@ -25,4 +25,52 @@ public class Event {
 
     @Column(name = "mixte_url")
     private String mixteUrl;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getEventTitle() {
+        return eventTitle;
+    }
+
+    public void setEventTitle(String eventTitle) {
+        this.eventTitle = eventTitle;
+    }
+
+    public String getCompetitionTitle() {
+        return competitionTitle;
+    }
+
+    public void setCompetitionTitle(String competitionTitle) {
+        this.competitionTitle = competitionTitle;
+    }
+
+    public String getDamesUrl() {
+        return damesUrl;
+    }
+
+    public void setDamesUrl(String damesUrl) {
+        this.damesUrl = damesUrl;
+    }
+
+    public String getMessieursUrl() {
+        return messieursUrl;
+    }
+
+    public void setMessieursUrl(String messieursUrl) {
+        this.messieursUrl = messieursUrl;
+    }
+
+    public String getMixteUrl() {
+        return mixteUrl;
+    }
+
+    public void setMixteUrl(String mixteUrl) {
+        this.mixteUrl = mixteUrl;
+    }
 }
