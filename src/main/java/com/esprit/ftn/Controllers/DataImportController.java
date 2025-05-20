@@ -42,6 +42,17 @@ public class DataImportController {
         }
     }
 
+    @PostMapping("/clubs")
+    public ResponseEntity<String> importClubs(@RequestParam("file") MultipartFile file) {
+        try {
+            String jsonContent = new String(file.getBytes(), StandardCharsets.UTF_8);
+            dataImportService.importClubsFromJson(jsonContent);
+            return ResponseEntity.ok("Clubs imported successfully");
+        } catch (IOException e) {
+            return ResponseEntity.badRequest().body("Error importing clubs: " + e.getMessage());
+        }
+    }
+
     @PostMapping("/rankings")
     public ResponseEntity<String> importRankings(@RequestParam("file") MultipartFile file) {
         try {
@@ -50,34 +61,6 @@ public class DataImportController {
             return ResponseEntity.ok("Rankings imported successfully");
         } catch (IOException e) {
             return ResponseEntity.badRequest().body("Error importing rankings: " + e.getMessage());
-        }
-    }
-
-    @PostMapping("/data")
-    public ResponseEntity<String> importJsonData(
-            @RequestParam("file") MultipartFile file,
-            @RequestParam("type") String type) {
-
-        try {
-            String jsonContent = new String(file.getBytes(), StandardCharsets.UTF_8);
-
-            switch (type.toLowerCase()) {
-                case "competitions":
-                    dataImportService.importCompetitionsFromJson(jsonContent);
-                    break;
-                case "events":
-                    dataImportService.importEventsFromJson(jsonContent);
-                    break;
-                case "rankings":
-                    dataImportService.importRankingsFromJson(jsonContent);
-                    break;
-                default:
-                    return ResponseEntity.badRequest().body("Unknown import type: " + type);
-            }
-
-            return ResponseEntity.ok("Data imported successfully");
-        } catch (IOException e) {
-            return ResponseEntity.badRequest().body("Error importing data: " + e.getMessage());
         }
     }
 }
