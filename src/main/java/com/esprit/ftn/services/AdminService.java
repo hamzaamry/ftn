@@ -42,11 +42,7 @@ public class AdminService {
 
         User savedUser = userRepository.save(user);
 
-        // Create admin
-        Admin admin = new Admin();
-        admin.setUser(savedUser);
-        admin.setSuperAdmin(true);
-        adminRepository.save(admin);
+
 
         // Generate JWT token
         String token = jwtUtil.generateToken(user.getEmail(), user.getType().toString());

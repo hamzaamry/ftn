@@ -2,7 +2,7 @@ package com.esprit.ftn.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
+import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 @Data
@@ -18,10 +18,14 @@ public class User {
     private String password;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = true)
     private UserType type;
 
     public enum UserType {
         SUPER_ADMIN, ADMIN, COACH, ATHLETE
     }
+
+    private String resetToken;
+
+    private LocalDateTime resetTokenExpiry;
 }
