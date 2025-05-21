@@ -1,9 +1,12 @@
 package com.esprit.ftn.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "competitions")
@@ -24,6 +27,10 @@ public class Competition {
     private LocalDate dateStart;
 
     private LocalDate dateEnd;
+
+    @Transient
+    @JsonProperty("events")
+    private List<Event> events = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -71,5 +78,13 @@ public class Competition {
 
     public void setDateEnd(LocalDate dateEnd) {
         this.dateEnd = dateEnd;
+    }
+
+    public List<Event> getEvents() {
+        return events;
+    }
+
+    public void setEvents(List<Event> events) {
+        this.events = events;
     }
 }
