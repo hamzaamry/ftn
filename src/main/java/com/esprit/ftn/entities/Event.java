@@ -1,7 +1,11 @@
 package com.esprit.ftn.entities;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "events")
@@ -25,6 +29,11 @@ public class Event {
 
     @Column(name = "mixte_url")
     private String mixteUrl;
+
+    @Transient
+    @JsonProperty("rankings")
+    private List<Ranking> rankings = new ArrayList<>();
+
 
     public Long getId() {
         return id;
@@ -72,5 +81,13 @@ public class Event {
 
     public void setMixteUrl(String mixteUrl) {
         this.mixteUrl = mixteUrl;
+    }
+
+    public List<Ranking> getRankings() {
+        return rankings;
+    }
+
+    public void setRankings(List<Ranking> rankings) {
+        this.rankings = rankings;
     }
 }

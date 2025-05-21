@@ -17,4 +17,28 @@ public class Admin {
 
     @Column(name = "is_super_admin")
     private boolean isSuperAdmin = false;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public boolean isSuperAdmin() {
+        return isSuperAdmin;
+    }
+
+    public void setSuperAdmin(boolean superAdmin) {
+        isSuperAdmin = superAdmin;
+    }
 }
