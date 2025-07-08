@@ -37,8 +37,12 @@ public class SecurityConfig {
                                 "/api/auth/login",
                                 "/api/auth/forget-password",
                                 "/api/auth/reset-password",
-                                "/api/admin/**"
-                                //hh
+                                "/api/admin/**",
+                                "/api/piscines",
+                                "/api/piscines/**",
+                                "/api/equipes/**",      // 👈 autorise les endpoints équipe
+                                "/uploads/**"
+                                //
 
                         ).permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() // ✅ Ajouté

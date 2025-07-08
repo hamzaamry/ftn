@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CoachRepository extends JpaRepository<Coach, Long> {
     boolean existsByUser(User user);
+    Coach findByUserEmail(String email);
+
 }

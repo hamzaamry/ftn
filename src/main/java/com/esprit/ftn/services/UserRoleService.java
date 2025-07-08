@@ -48,24 +48,16 @@ public class UserRoleService {
     }
 
     public List<User> getAllUsersWithRoles() {
-        return userRepository.findAll(); // Tu peux enrichir avec projection DTO si besoin
+        return userRepository.findAll()
+                .stream()
+                .filter(user -> user.getType() != User.UserType.ADMIN
+                        && user.getType() != User.UserType.SUPER_ADMIN)
+                .toList();
     }
 
-    public Admin createAdmin(Long userId, boolean superAdmin) {
-        User user = userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
 
-        if (adminRepository.existsByUser(user))
-            throw new RuntimeException("Déjà admin");
 
-        Admin admin = new Admin();
-        admin.setUser(user);
-        admin.setSuperAdmin(superAdmin);
-        user.setType(User.UserType.ADMIN);
 
-        userRepository.save(user);
-        return adminRepository.save(admin);
-    }
 
     public void deleteUserById(Long userId) {
         // Avant de supprimer le user, supprimer ses rôles liés (Admin, Coach, Athlete) si ils existent

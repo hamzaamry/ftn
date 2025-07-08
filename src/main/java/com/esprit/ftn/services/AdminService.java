@@ -29,12 +29,12 @@ public class AdminService {
 
     @Transactional
     public AuthResponse createSuperAdmin(SuperAdminRegistrationRequest request) {
-        // Check if email already exists
+        // Vérifie si l'email existe déjà
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new RuntimeException("Email already exists");
         }
 
-        // Create user
+        // Créer l'utilisateur
         User user = new User();
         user.setEmail(request.getEmail());
         user.setPassword(passwordEncoder.encode(request.getPassword()));
@@ -42,11 +42,16 @@ public class AdminService {
 
         User savedUser = userRepository.save(user);
 
+        // Créer l'admin avec isSuperAdmin = true
+        Admin admin = new Admin();
+        admin.setUser(savedUser);
+        admin.setSuperAdmin(true);
+        adminRepository.save(admin); // 💡 Ajout important ici
 
-
-        // Generate JWT token
+        // Générer le token JWT
         String token = jwtUtil.generateToken(user.getEmail(), user.getType().toString());
 
+        // Retourner la réponse
         return new AuthResponse(token, "Super admin created successfully");
     }
 }
