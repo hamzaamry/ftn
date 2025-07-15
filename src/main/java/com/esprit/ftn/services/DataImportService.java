@@ -25,6 +25,9 @@ public class DataImportService {
     @Autowired
     private RankingRepository rankingRepository;
 
+    @Autowired
+    private ClubRepository ClubRepository;
+
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Transactional
@@ -96,10 +99,6 @@ public class DataImportService {
     @Transactional
     public void importRankingsFromJson(String jsonContent) throws IOException {
         JsonNode rootNode = objectMapper.readTree(jsonContent);
-
-        // Clear existing data if needed
-        // rankingRepository.deleteAll();
-
         List<Ranking> rankingsToSave = new ArrayList<>();
 
         // Process each competition in the array
@@ -164,6 +163,52 @@ public class DataImportService {
 
         // Batch save all rankings
         rankingRepository.saveAll(rankingsToSave);
+    }
+
+    @Transactional
+    public void importClubsFromJson(String jsonContent) throws IOException {
+        JsonNode rootNode = objectMapper.readTree(jsonContent);
+        JsonNode clubsNode = rootNode.get("clubs");
+        String sourceUrl = rootNode.has("url") ? rootNode.get("url").asText() : null;
+        // Default discipline if not provided in JSON
+        String discipline = rootNode.has("discipline") ? rootNode.get("discipline").asText() : "unknown";
+
+        if (clubsNode != null && clubsNode.isArray()) {
+            for (JsonNode clubNode : clubsNode) {
+                String originalName = clubNode.get("club_name").asText();
+                String link = clubNode.has("club_link") ? clubNode.get("club_link").asText() : null;
+
+                // Extract the club name without the number prefix (e.g., "1/ACADEMIE DE NATATION" -> "ACADEMIE DE NATATION")
+                String name = originalName;
+                if (name.matches("\\d+/.*")) {
+                    name = name.substring(name.indexOf('/') + 1).trim();
+                }
+
+                // Check if club already exists
+                Optional<Club> existingClub = ClubRepository.findByName(name);
+
+                if (existingClub.isPresent()) {
+                    Club club = existingClub.get();
+                    // Update existing club if necessary
+                    if (link != null && club.getLink() == null) {
+                        club.setLink(link);
+                    }
+                    if (sourceUrl != null && club.getSourceUrl() == null) {
+                        club.setSourceUrl(sourceUrl);
+                    }
+                    ClubRepository.save(club);
+                } else {
+                    // Create new club
+                    Club club = new Club();
+                    club.setName(name);
+                    club.setOriginalName(originalName);
+                    club.setLink(link);
+                    club.setSourceUrl(sourceUrl);
+                    club.setDiscipline(discipline);
+                    ClubRepository.save(club);
+                }
+            }
+        }
     }
 
     private void extractDatesFromTitle(Competition competition) {
@@ -329,5 +374,4 @@ public class DataImportService {
 
         return -1;
     }
-
 }
